@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --title: 2.375rem;
+  --subtitle: .8rem;
+
+  --title-font: 'Lora', serif;
+  --subtitle-font: 'Ubuntu', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+header {
+  width: 100%;
+  padding-block: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.title {
+  font-size: var(--title);
+  font-family: var(--title-font);
+  color: #143774;
+}
+
+.subtitle {
+  font-size: var(--subtitle);
+  font-family: var(--subtitle-font);
+  color: #1792D2;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+nav {
+  margin-top: 1.5rem;
+}
+
+ul {
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  text-transform: uppercase;
+  margin: 0 1.5rem;
+  font-size: var(--subtitle);
+  font-family: var(--subtitle-font);
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: all .3s ease-in;
+  border-bottom: 3px solid transparent;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #707070;
+}
+
+.active {
+  border-bottom: 2px solid #707070;
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 800px) {
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
